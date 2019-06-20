@@ -1,0 +1,31 @@
+<% include partials/header.ejs %>
+    <div class="table-wrapper">
+        <% if (problems.length > 0) {%>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tags</th>
+                        <th scope="col">Diff_Level</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% problems.forEach((problems, index) => { %>
+                        <tr>
+                            <th scope="row"><%= problems.P_ID %></th>
+                            <td><%= problems.Tags %></td>
+                            <td><%= problems.Diff_Level %></td>
+                        
+                           
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">No Problems found. Go <a href="/add-Problems" >here</a> to add problems.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
